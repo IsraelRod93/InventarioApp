@@ -6,3 +6,7 @@ dotnet clean - Limpia el proyecto
 dotnet restore - Restaura las dependencias
 dotnet test - Ejecuta las pruebas
 dotnet publish - Publica el programa
+
+dotnet run -- hola mundo
+args[0] = hola
+args[1] = mundo
