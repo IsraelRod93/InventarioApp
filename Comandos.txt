@@ -1,0 +1,8 @@
+dotnet run - Ejecuta el programa
+dotnet --version - Muestra la version de .NET
+dotnet new list - Muestra los templates disponibles
+dotnet build - Compila el programa
+dotnet clean - Limpia el proyecto
+dotnet restore - Restaura las dependencias
+dotnet test - Ejecuta las pruebas
+dotnet publish - Publica el programa
