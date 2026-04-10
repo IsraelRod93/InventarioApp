@@ -113,4 +113,5 @@ usuarios.Add("Juan");
 usuarios.Add("Maria");
 usuarios.Add("Juan"); // No se agrega, ya existe
 
-## LinQ
+## LinQ;
+    Expresamos filtramos una coleccion, indicando el criterio, sin preocuparnos por el recorrido
