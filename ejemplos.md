@@ -88,3 +88,29 @@ class Producto
     // Falla temprano, evita procesamiento innecesario
     // Código mas limpio y legible
     // Menos indentación (no nested if)
+
+
+## List:
+ Ordenada, acceso por indice [0],[1],[2]...
+ Uso: Cuando importa el orden   
+
+ var productos = new List<Producto>();
+ productos.Add(new Producto { Id = 1, Nombre = "Laptop" });
+
+## Dictionary:
+Clave, Valor, ["ID"]  = objeto
+Uso: Cuando necesitamos una busqueda rapida
+
+var productos = new Dictionary<int, Producto>();
+productos.Add(1, new Producto { Id = 1, Nombre = "Laptop" });
+
+## HasgSet:
+Sin duplicados
+Uso: Cuando requerimos unicidad
+
+var usuarios = new HashSet<string>();
+usuarios.Add("Juan");
+usuarios.Add("Maria");
+usuarios.Add("Juan"); // No se agrega, ya existe
+
+## LinQ
