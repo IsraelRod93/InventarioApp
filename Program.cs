@@ -11,6 +11,7 @@ int cantidadProductos = 0;
 decimal valorTotalInventario = 0.00m; // El sufijo 'm' indica que es tipo decimal (ideal para dinero)
 bool sistemaActivo = true; // Controla si el ciclo principal debe seguir corriendo
 
+
 // --- MANEJO DE ARGUMENTOS (dotnet run --opción) ---
 // args contiene las palabras que escribes después de ejecutar el programa
 if (args.Length > 0)
@@ -39,6 +40,14 @@ if (args.Length > 0)
 
 // --- INICIO DE LA INTERFAZ ---
 MostrarBanner();
+bool continuar = true; // Controla si el ciclo interno debe seguir corriendo
+
+while(continuar){
+    MostrarMenu();
+    string comando = LeerEntrada("inventario");
+    continuar = ProcesarComando(comando);
+}
+
 Console.WriteLine("Comandos disponibles: listar, agregar, buscar, salir");
 Console.WriteLine();
 
@@ -113,4 +122,12 @@ void MostrarAyuda()
     Console.WriteLine("  --help, -h       Muestra esta ayuda");
     Console.WriteLine("  --version, -v    Muestra la versión");
     // ... más líneas de ayuda ...
+}
+
+void MostrarMenu() {
+    Console.WriteLine("Menú:");
+    Console.WriteLine("1. Listar - Ver productos");
+    Console.WriteLine("2. Agregar - Agregar productos");
+    Console.WriteLine("3. Buscar - Buscar productos");
+    Console.WriteLine("4. Salir - Salir del programa");
 }
